@@ -34,7 +34,16 @@ switch($text)
 			$parameters["method"] = "sendMessage";
 		break;
 		
+		default:
+		
+			if (date("h:i") == "23:00")
+			{$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");}
+		else
+			{$parameters = array('chat_id' => $chatId, "text" => "Nulla");}
+			$parameters["method"] = "sendMessage";
+		
 	}
 	
 	echo json_encode($parameters);
 	
+?>
