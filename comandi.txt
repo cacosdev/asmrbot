@@ -1,0 +1,3 @@
+https://api.telegram.org/bot562466831:AAF3qVCsy32gKpEY3MG5PWIs4iGl_dAeIcg/getupdates
+https://api.telegram.org/bot562466831:AAF3qVCsy32gKpEY3MG5PWIs4iGl_dAeIcg/setWebhook?url=https://criexeprovabot.herokuapp.com/execute.php
+https://api.telegram.org/bot562466831:AAF3qVCsy32gKpEY3MG5PWIs4iGl_dAeIcg/setWebhook?url=
