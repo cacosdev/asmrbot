@@ -32,10 +32,8 @@ switch($text)
 			$parameters = array('chat_id' => $chatId, "text" => $update);
 			$parameters["method"] = "sendMessage";
 		break;
-		
-		default:
 			
-	}
+	default:
 	if (date("h:i") == "23:30")
 			{	
 				$parameters = array('chat_id' => $chatId, "sticker" => "CAADBAADAQADRO4SJliURnbZUCcJAg");
@@ -46,5 +44,6 @@ switch($text)
 				$parameters = array('chat_id' => $chatId, "text" => "Nulla");
 				$parameters["method"] = "sendMessage";
 			}
+	}
 echo json_encode($parameters);
 ?>
