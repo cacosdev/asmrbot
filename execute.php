@@ -35,7 +35,7 @@ switch($text)
 		
 		default:
 			//if (date("h:i") == "23:00")
-			if ("ciao" == "ciao")
+			if (strcmp("ciao","ciao") == 0)
 			{	
 				//$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");
 				$parameters = array('chat_id' => $chatId, "sticker" => "CAADBAADAQcAApEMbAtICGAYZ93cWAI");
@@ -45,8 +45,9 @@ switch($text)
 			else
 			{
 				$parameters = array('chat_id' => $chatId, "text" => "Nulla");
+				$parameters["method"] = "sendMessage";
 			}
-			$parameters["method"] = "sendMessage";
+			
 	}
 	
 	echo json_encode($parameters);
