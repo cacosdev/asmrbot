@@ -22,7 +22,7 @@ $text = strtolower($text);
 $stickers = array("CAADBAADAQcAApEMbAtICGAYZ93cWAI", "CAADAgADHAADyIsGAAFzjQavel2uswI", "CAADBAADKwADfXowBxSsyRbvJAthAg");*/
 
 header("Content-Type: application/json");
-
+$chatId =  "-273263039";
 	if (date("h:i") == "23:30")
 			{	
 				$parameters = array('chat_id' => $chatId, "sticker" => "CAADBAADAQADRO4SJliURnbZUCcJAg");
