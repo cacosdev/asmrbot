@@ -34,9 +34,8 @@ switch($text)
 		break;
 		
 		default:
-		$parameters = array('chat_id' => $chatId, "sticker" => "AAQEABNROL8aAAQ1COQppSMeVcEeAAIC"]);
-				$parameters["method"] = "sendSticker";
-			/*if (date("h:i") == "23:00")
+			//if (date("h:i") == "23:00")
+			if ("ciao" == "ciao")
 			{	
 				//$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");
 				$parameters = array('chat_id' => $chatId, "sticker" => "AAQEABNROL8aAAQ1COQppSMeVcEeAAIC"]);
@@ -46,7 +45,7 @@ switch($text)
 			{
 				$parameters = array('chat_id' => $chatId, "text" => "Nulla");
 			}
-			$parameters["method"] = "sendMessage";*/
+			$parameters["method"] = "sendMessage";
 	}
 	
 	echo json_encode($parameters);
