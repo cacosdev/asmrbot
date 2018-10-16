@@ -36,7 +36,7 @@ switch($text)
 		
 		default:
 		
-			if (date("h:i") == "23:00")
+			if (string(date("h:i")) == "23:00")
 			{$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");}
 		else
 			{$parameters = array('chat_id' => $chatId, "text" => "Nulla");}
