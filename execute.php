@@ -1,15 +1,15 @@
 <?php
-//$content = file_get_contents("php://input");
-//$update = json_decode($content, true);
-
-/*if(!$update)
+$content = file_get_contents("php://input");
+$update = json_decode($content, true);
+/*
+if(!$update)
 {
-  exit;
-}*/
+  //exit;
+}
 
-/*$message = isset($update['message']) ? $update['message'] : "";
+$message = isset($update['message']) ? $update['message'] : "";
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
- //isset($message['chat']['id']) ? $message['chat']['id'] : "";
+$chatId =  "-273263039"; //isset($message['chat']['id']) ? $message['chat']['id'] : "";
 $firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : "";
 $lastname = isset($message['chat']['last_name']) ? $message['chat']['last_name'] : "";
 $username = isset($message['chat']['username']) ? $message['chat']['username'] : "";
@@ -20,17 +20,17 @@ $text = isset($message['text']) ? $message['text'] : "";*/
 $text = strtolower($text);
 
 $stickers = array("CAADBAADAQcAApEMbAtICGAYZ93cWAI", "CAADAgADHAADyIsGAAFzjQavel2uswI", "CAADBAADKwADfXowBxSsyRbvJAthAg");*/
-$chatId =  "-273263039";
+
 header("Content-Type: application/json");
 
 	if (date("h:i") == "23:30")
 			{	
-				$parameters = array($chatId, "sticker" => "CAADBAADAQADRO4SJliURnbZUCcJAg");
+				$parameters = array('chat_id' => $chatId, "sticker" => "CAADBAADAQADRO4SJliURnbZUCcJAg");
 				$parameters["method"] = "sendSticker";
 			}
 			else 
 			{
-				$parameters = array($chatId, "text" => "test");
+				$parameters = array('chat_id' => $chatId, "text" => "test");
 				$parameters["method"] = "sendMessage";
 			}
 	
