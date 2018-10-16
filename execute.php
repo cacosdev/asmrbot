@@ -38,7 +38,7 @@ switch($text)
 			if (strcmp("ciao","ciao") == 0)
 			{	
 				//$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");
-				$parameters = array('chat_id' => $chatId, "sticker" => "AAQEABNROL8aAAQ1COQppSMeVcEeAAIC");
+				$parameters = array('chat_id' => $chatId, "sticker" => "CAADBAADAQADRO4SJliURnbZUCcJAg");
 				//AAQEABNROL8aAAQ1COQppSMeVcEeAAIC
 				$parameters["method"] = "sendSticker";
 			}
