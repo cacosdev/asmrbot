@@ -25,8 +25,7 @@ header("Content-Type: application/json");
 switch($text)
 	{	
 		case "/sticker":
-			$parameters = array('chat_id' => $chatId, "sticker" => $stickers[rand(0,count($stickers) - 1)]);
-			$parameters["method"] = "sendSticker";
+			
 		break;
 		
 		case "/infomsg":
@@ -35,15 +34,19 @@ switch($text)
 		break;
 		
 		default:
-			if (date("h:i") == "23:00")
+		$parameters = array('chat_id' => $chatId, "sticker" => "AAQEABNROL8aAAQ1COQppSMeVcEeAAIC"]);
+				$parameters["method"] = "sendSticker";
+			/*if (date("h:i") == "23:00")
 			{	
-				$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");
+				//$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");
+				$parameters = array('chat_id' => $chatId, "sticker" => "AAQEABNROL8aAAQ1COQppSMeVcEeAAIC"]);
+				$parameters["method"] = "sendSticker";
 			}
 			else
 			{
 				$parameters = array('chat_id' => $chatId, "text" => "Nulla");
 			}
-			$parameters["method"] = "sendMessage";
+			$parameters["method"] = "sendMessage";*/
 	}
 	
 	echo json_encode($parameters);
