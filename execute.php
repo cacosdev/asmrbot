@@ -22,18 +22,7 @@ $text = strtolower($text);
 $stickers = array("CAADBAADAQcAApEMbAtICGAYZ93cWAI", "CAADAgADHAADyIsGAAFzjQavel2uswI", "CAADBAADKwADfXowBxSsyRbvJAthAg");
 
 header("Content-Type: application/json");
-switch($text)
-	{	
-		case "/sticker":
-			
-		break;
-		
-		case "/infomsg":
-			$parameters = array('chat_id' => $chatId, "text" => $update);
-			$parameters["method"] = "sendMessage";
-		break;
-			
-	default:
+
 	if (date("h:i") == "23:30")
 			{	
 				$parameters = array('chat_id' => $chatId, "sticker" => "CAADBAADAQADRO4SJliURnbZUCcJAg");
@@ -44,6 +33,6 @@ switch($text)
 				$parameters = array('chat_id' => $chatId, "text" => "Nulla");
 				$parameters["method"] = "sendMessage";
 			}
-	}
+	
 echo json_encode($parameters);
 ?>
