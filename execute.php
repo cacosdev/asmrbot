@@ -30,7 +30,7 @@ header("Content-Type: application/json");
 			}
 			else 
 			{
-				$parameters = array('chat_id' => $chatId, "text" => "Nulla");
+				$parameters = array('chat_id' => $chatId, "text" => "test");
 				$parameters["method"] = "sendMessage";
 			}
 	
