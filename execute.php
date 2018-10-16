@@ -4,7 +4,7 @@ $update = json_decode($content, true);
 
 if(!$update)
 {
-  exit;
+  //exit;
 }
 
 $message = isset($update['message']) ? $update['message'] : "";
@@ -34,22 +34,17 @@ switch($text)
 		break;
 		
 		default:
-			//if (date("h:i") == "23:00")
-			if (strcmp("ciao","ciao") == 0)
+			
+	}
+	if (date("h:i") == "23:30")
 			{	
-				//$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");
 				$parameters = array('chat_id' => $chatId, "sticker" => "CAADBAADAQADRO4SJliURnbZUCcJAg");
-				//AAQEABNROL8aAAQ1COQppSMeVcEeAAIC
 				$parameters["method"] = "sendSticker";
 			}
-			else
+			else 
 			{
 				$parameters = array('chat_id' => $chatId, "text" => "Nulla");
 				$parameters["method"] = "sendMessage";
 			}
-			
-	}
-	
-	echo json_encode($parameters);
-	
+echo json_encode($parameters);
 ?>
