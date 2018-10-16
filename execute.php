@@ -19,6 +19,8 @@ $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
 $text = strtolower($text);
 
+$stickers = array("CAADBAADAQcAApEMbAtICGAYZ93cWAI", "CAADAgADHAADyIsGAAFzjQavel2uswI", "CAADBAADKwADfXowBxSsyRbvJAthAg");
+
 header("Content-Type: application/json");
 switch($text)
 	{	
@@ -36,7 +38,8 @@ switch($text)
 			if ("ciao" == "ciao")
 			{	
 				//$parameters = array('chat_id' => $chatId, "text" => "Momento ASMR");
-				$parameters = array('chat_id' => $chatId, "sticker" => "AAQEABNROL8aAAQ1COQppSMeVcEeAAIC");
+				$parameters = array('chat_id' => $chatId, "sticker" => "CAADBAADAQcAApEMbAtICGAYZ93cWAI"]);
+				//AAQEABNROL8aAAQ1COQppSMeVcEeAAIC
 				$parameters["method"] = "sendSticker";
 			}
 			else
